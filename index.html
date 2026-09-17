@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>סילבוס למשתלמי פסגה | בינת הלב - Life Coding</title>
+<link href="https://fonts.googleapis.com/css2?family=Suez+One&family=Assistant:wght@300;400;600;700&family=Heebo:wght@300;400;600;700&family=Varela+Round&display=swap" rel="stylesheet">
+<style>
+
+:root {
+    --primary:       #2d7a6e;
+    --primary-dark:  #1f5f55;
+    --primary-light: #4a9e90;
+    --accent:        #5c3a1e;
+    --accent-mid:    #7a4e30;
+    --gold:          #c4a573;
+    --gold-light:    #dcc8a0;
+    --cream:         #f8f1e7;
+    --cream-deep:    #ede0ce;
+    --cream-light:   #fffdf9;
+    --text-dark:     #3a281a;
+    --text-mid:      #5a4233;
+    --text-light:    #9a8574;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html, body { overflow-x: hidden; }
+
+body {
+    font-family: 'Assistant', sans-serif;
+    background-color: var(--cream);
+    color: var(--text-dark);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    line-height: 1.8;
+    font-size: 1.4rem;
+}
+
+/* LOGO BANNER */
+.logo-banner { width: 100%; background: var(--cream); }
+.logo-banner img {
+    width: 100%; max-width: 900px;
+    height: auto; display: block; margin: 0 auto;
+}
+
+/* AUTHOR LINE */
+.author-line { text-align: center; padding: 1rem 1rem 0.3rem; }
+.author-line p {
+    font-family: 'Heebo', sans-serif;
+    font-size: 1.5rem; font-weight: 600;
+    color: var(--primary); letter-spacing: 0.02em;
+}
+
+/* TITLE BLOCK */
+.title-block { text-align: center; padding: 1.5rem 1.5rem 1rem; }
+.main-title {
+    font-family: 'Suez One', serif;
+    font-size: clamp(2.2rem, 5vw, 3.4rem);
+    color: var(--primary); font-weight: normal;
+    line-height: 1.3; margin-bottom: 0.5rem;
+}
+.subtitle-act {
+    font-family: 'Heebo', sans-serif;
+    font-size: 1.5rem; font-weight: 600;
+    color: var(--primary); margin-top: 0.4rem;
+}
+
+/* GOLD DIVIDER */
+.gold-divider {
+    display: flex; align-items: center;
+    justify-content: center; gap: 1rem;
+    padding: 0.5rem 2rem 2rem;
+}
+.gold-divider::before, .gold-divider::after {
+    content: ''; height: 1.5px; width: 80px;
+    background: linear-gradient(90deg, transparent, var(--gold), transparent);
+}
+.gold-divider span { color: var(--gold); font-size: 1.1rem; letter-spacing: 0.3rem; }
+
+/* CONTENT WRAPPER */
+.content { flex: 1; max-width: 860px; margin: 0 auto; padding: 0 1.5rem 3rem; width: 100%; }
+
+/* LESSON CARD */
+.lesson-card {
+    background: var(--cream-light); border-radius: 1.25rem;
+    padding: 2rem 2.2rem; margin-bottom: 1.6rem;
+    box-shadow: 0 6px 28px rgba(100,65,30,0.10);
+    border-top: 3px solid var(--primary);
+    display: flex; gap: 1.5rem; align-items: flex-start;
+}
+.lesson-num {
+    flex-shrink: 0;
+    width: 3.4rem; height: 3.4rem;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+    color: var(--cream-light);
+    font-family: 'Suez One', serif; font-size: 1.6rem;
+    display: flex; align-items: center; justify-content: center;
+    box-shadow: 0 4px 14px rgba(45,122,110,0.3);
+}
+.lesson-body { flex: 1; }
+.lesson-title {
+    font-family: 'Suez One', serif; font-size: 1.7rem;
+    color: var(--primary-dark); font-weight: normal;
+    line-height: 1.35; margin-bottom: 0.3rem;
+}
+.lesson-sub {
+    font-family: 'Heebo', sans-serif; font-weight: 600;
+    font-size: 1.1rem; color: var(--accent-mid);
+    margin-bottom: 0.7rem;
+}
+.lesson-tag {
+    display: inline-block;
+    font-family: 'Heebo', sans-serif; font-weight: 600;
+    font-size: 0.95rem; color: var(--primary-dark);
+    background: rgba(196,165,115,0.18);
+    border: 1px solid var(--gold-light);
+    border-radius: 999px;
+    padding: 0.15rem 0.9rem; margin-bottom: 0.7rem;
+}
+.lesson-card p {
+    font-family: 'Varela Round', sans-serif;
+    font-size: 1.3rem; color: #2d2d2d; line-height: 1.8;
+}
+.lesson-type {
+    display: inline-block;
+    font-family: 'Heebo', sans-serif; font-weight: 600;
+    font-size: 0.95rem; color: var(--cream-light);
+    background: var(--primary);
+    border-radius: 999px;
+    padding: 0.15rem 0.9rem;
+}
+.lesson-place {
+    display: inline-block;
+    font-family: 'Heebo', sans-serif; font-weight: 600;
+    font-size: 0.95rem; color: var(--accent-mid);
+    background: rgba(196,165,115,0.10);
+    border: 1px solid var(--gold-light);
+    border-radius: 999px;
+    padding: 0.15rem 0.9rem;
+}
+.tag-row { display: flex; flex-wrap: wrap; gap: 0.4rem; align-items: center; margin-bottom: 0.6rem; }
+
+.course-meta {
+    font-family: 'Heebo', sans-serif; font-weight: 600;
+    font-size: 1.15rem; color: var(--primary);
+    margin-top: 0.5rem; line-height: 1.5;
+}
+.link-row {
+    display: flex; flex-wrap: wrap; gap: 0.7rem;
+    justify-content: center; margin-top: 1.3rem;
+}
+.link-row a, .link-row button {
+    display: inline-flex; align-items: center; gap: 0.4rem;
+    padding: 0.5rem 1.4rem;
+    background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+    color: white; font-family: 'Varela Round', sans-serif;
+    font-size: 1rem; font-weight: 700; text-decoration: none;
+    border-radius: 999px; box-shadow: 0 3px 12px rgba(45,122,110,0.22);
+    transition: all 0.2s;
+}
+.link-row a:hover, .link-row button:hover { transform: translateY(-2px); box-shadow: 0 7px 20px rgba(45,122,110,0.32); }
+.link-row button { border: none; cursor: pointer; }
+.about-sec[hidden] { display: none; }
+
+/* ABOUT */
+.about-sec { margin-bottom: 2.5rem; }
+.section-heading {
+    font-family: 'Suez One', serif; font-size: 2rem;
+    color: var(--primary); font-weight: normal;
+    text-align: center; margin-bottom: 0.6rem;
+}
+.role {
+    text-align: center;
+    font-family: 'Heebo', sans-serif; font-weight: 600;
+    font-size: 1.2rem; color: var(--primary);
+    margin-bottom: 2rem; line-height: 1.6;
+}
+.role span { color: var(--gold); }
+.portrait { width: min(440px, 92%); margin: 0 auto 2.5rem; }
+.portrait img { width: 100%; border-radius: 1.25rem; box-shadow: 0 24px 54px -26px rgba(58,40,26,.45); display: block; }
+.about-card {
+    background: var(--cream-light); border-radius: 1.25rem;
+    padding: 2rem 2.2rem; margin-bottom: 1.8rem;
+    box-shadow: 0 6px 28px rgba(100,65,30,0.10);
+    border-top: 3px solid var(--primary);
+    text-align: right;
+}
+.about-card p {
+    font-family: 'Varela Round', sans-serif;
+    font-size: 1.3rem; color: #2d2d2d; line-height: 1.8;
+    margin-bottom: 1rem;
+}
+.about-card p:last-child { margin-bottom: 0; }
+.quote {
+    text-align: center;
+    font-family: 'Suez One', serif; font-weight: normal;
+    font-size: 1.5rem; color: var(--primary-dark);
+    line-height: 1.6; margin-bottom: 0.7rem;
+}
+.sig {
+    text-align: center;
+    font-family: 'Heebo', sans-serif; font-weight: 600;
+    font-size: 1.2rem; color: var(--accent-mid);
+    margin-bottom: 2rem;
+}
+.circle { width: min(360px, 82%); margin: 0 auto; }
+.circle img {
+    width: 100%; border-radius: 50%; display: block;
+    box-shadow: 0 24px 54px -26px rgba(58,40,26,.45);
+    outline: 1px solid var(--gold-light); outline-offset: 6px;
+}
+
+/* FOOTER */
+.footer {
+    background: linear-gradient(160deg, var(--primary-dark), var(--primary));
+    padding: 2.2rem 1.5rem;
+    text-align: center;
+    margin-top: 1.5rem;
+}
+.footer p {
+    font-family: 'Heebo', sans-serif;
+    font-size: 1.05rem; color: var(--cream-light); font-weight: 600;
+}
+
+/* FADE IN */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(12px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+.fade-in { animation: fadeIn 0.5s ease both; }
+
+@media (max-width: 600px) {
+    body { font-size: 1.25rem; }
+    .content { padding: 0 1rem 2rem; }
+    .gold-divider::before, .gold-divider::after { width: 40px; }
+    .lesson-card { padding: 1.6rem; gap: 1rem; }
+    .lesson-num { width: 2.8rem; height: 2.8rem; font-size: 1.35rem; }
+    .logo-banner img { max-width: 100%; }
+    .about-card { padding: 1.6rem; }
+}
+</style>
+</head>
+<body>
+
+<header class="logo-banner"><img src="hero-banner.png" alt="בינת הלב - Life Coding"></header>
+
+<div class="author-line"><p>יעל נזר ✦ מפתחת השיטה</p></div>
+
+<div class="title-block">
+  <h1 class="main-title">סילבוס ההשתלמות</h1>
+  <p class="subtitle-act">בינת הלב - Life Coding</p>
+  <p class="course-meta">מספר פתרון למידה 201031 · השתלמות נושאת גמול, 30 שעות</p>
+  <div class="link-row">
+    <a href="https://poh.education.gov.il/professional-development/compass-system/" target="_blank" rel="noopener noreferrer">להרשמה דרך מצפ"ן ←</a>
+    <a href="https://chat.whatsapp.com/BHvh4cu7svdF32xB5F6sqn" target="_blank" rel="noopener noreferrer">לקבוצת הוואטסאפ ←</a>
+    <a href="https://edu-il.zoom.us/j/8417501194" target="_blank" rel="noopener noreferrer">למפגשי הזום ←</a>
+    <button type="button" id="aboutBtn" onclick="toggleAbout()">לפרטים על המנחה ←</button>
+  </div>
+</div>
+
+<div class="gold-divider"><span>✦ ✦ ✦</span></div>
+
+<main class="content">
+
+  <!-- ===== מי אני ===== -->
+  <section class="about-sec" id="about" hidden>
+    <h2 class="section-heading">מי אני</h2>
+    <p class="role">יעל נזר, MEd <span>✦</span> מומחית לטכנו-פדגוגיה, בינה מלאכותית והתפתחות אישית</p>
+
+    <div class="portrait"><img src="yael-photo.jpg" alt="יעל נזר"></div>
+
+    <div class="about-card">
+      <p>אני יעל נזר, מפתחת שיטת Life Coding - בינת הלב. למעלה מ-35 שנה אני עוסקת בחינוך, בפדגוגיה דיגיטלית, בלמידה ובהובלת תהליכי שינוי במערכת החינוך ובבתי ספר. לקחתי את שני התחומים בהם אני מתמחה, העבודה התודעתית-רגשית והבינה המלאכותית, וחיברתי אותם לשיטה אחת.</p>
+      <p>השיטה משלבת כלי AI מתקדמים עם מתודולוגיות מעשיות לפיתוח חוסן, מודעות, תקשורת וגמישות מחשבתית. אני מוסמכת בשיטת העבודה של ביירון קייטי, ב-NLP ובתקשורת מקרבת, ומשלבת גם את גישת ACT ואת האינטליגנציה החיובית. הבסיס המדעי מגיע ממחקרי הנוירופלסטיות, שמראים שהמוח גמיש ושאפשר לבנות בו נתיבים חדשים.</p>
+      <p>אני מכירה את שדה החינוך מבפנים, את קצב היום, את העומס ואת הרגעים שבהם מורה נדרש להיות נוכח עבור אחרים. התוכנית מועברת בצורה נגישה, מקצועית ויישומית, ומותאמת לקהל, לתרבות ולצרכים של כל מרכז פסג"ה ורשת חינוך.</p>
+    </div>
+
+    <p class="quote">מה שאנחנו יוצרים בתוך הלב, מוצא בסופו של דבר את דרכו אל העולם.</p>
+    <div class="sig">באהבה, יעל</div>
+
+    <div class="circle"><img src="yael-circle.jpg" alt="יעל נזר · בינת הלב · Life Coding"></div>
+  </section>
+
+  <div class="lesson-card fade-in">
+    <div class="lesson-num">1</div>
+    <div class="lesson-body">
+      <div class="tag-row">
+        <span class="lesson-tag">18.11.26 · 17:00–19:30</span>
+        <span class="lesson-type">פנים אל פנים</span>
+        <span class="lesson-place">מרכז פסגה כפר סבא</span>
+      </div>
+      <h3 class="lesson-title">הקרנת הבכורה: לחשוף את "תסריט החיים"</h3>
+      <p class="lesson-sub">למה זה מופיע ב"סרט שלי"?</p>
+      <p>היכרות עם הדפוסים, המחשבות והסיפורים שמנהלים את חיינו. שימוש בכלי בינה מלאכותית ככלי דיאגנוסטי חכם לזיהוי תבניות חשיבה והרגלים אוטומטיים, ויצירת תיק הפקה אישי.</p>
+    </div>
+  </div>
+
+  <div class="lesson-card fade-in">
+    <div class="lesson-num">2</div>
+    <div class="lesson-body">
+      <div class="tag-row">
+        <span class="lesson-tag">2.12.26 · 17:00–19:30</span>
+        <span class="lesson-type">סינכרוני: הרצאה וסדנה</span>
+      </div>
+      <h3 class="lesson-title">מי מנהל את הסרט שלי?</h3>
+      <p>הצצה אל "חדר העריכה" של חיינו. מסע עומק להבנת מערכת ההפעלה הפנימית, האמונות, הפרשנויות והתגובות האוטומטיות שמעצבות את המציאות האישית, לצד כלים לקרקוע גופני.</p>
+    </div>
+  </div>
+
+  <div class="lesson-card fade-in">
+    <div class="lesson-num">3</div>
+    <div class="lesson-body">
+      <div class="tag-row">
+        <span class="lesson-tag">16.12.26 · 17:00–19:30</span>
+        <span class="lesson-type">א-סינכרוני</span>
+      </div>
+      <h3 class="lesson-title">מה הסרט החיצוני מגלה לי?</h3>
+      <p>התבוננות במציאות החיצונית כמראה לעולם הפנימי. זיהוי הקשר בין מערכות יחסים, אתגרים ודפוסים חוזרים לבין הקוד הפנימי שמנהל אותנו, וחקירת הרווחים והמחירים של אמונות השורש.</p>
+    </div>
+  </div>
+
+  <div class="lesson-card fade-in">
+    <div class="lesson-num">4</div>
+    <div class="lesson-body">
+      <div class="tag-row">
+        <span class="lesson-tag">23.12.26 · 17:00–19:30</span>
+        <span class="lesson-type">פנים אל פנים</span>
+        <span class="lesson-place">מרכז פסגה כפר סבא</span>
+      </div>
+      <h3 class="lesson-title">מקודדים מחדש</h3>
+      <p class="lesson-sub">שיטת "העבודה" של Byron Katie</p>
+      <p>היכרות עם שיטת "העבודה" של ביירון קייטי לזיהוי מחשבות מעכבות. תרגול מעשי של ארבע השאלות וההיפוכים באמצעות "בוט מאפשר" מבוסס בינה מלאכותית, לפיתוח גמישות מחשבתית מול סיטואציות מאתגרות.</p>
+    </div>
+  </div>
+
+  <div class="lesson-card fade-in">
+    <div class="lesson-num">5</div>
+    <div class="lesson-body">
+      <div class="tag-row">
+        <span class="lesson-tag">6.1.27 · 17:00–19:30</span>
+        <span class="lesson-type">סינכרוני: הרצאה וסדנה</span>
+      </div>
+      <h3 class="lesson-title">מפת הבמאי: לצאת מהמטריקס</h3>
+      <p class="lesson-sub">מודל ה-ACT Matrix</p>
+      <p>היכרות עם מודל המטריקס מגישת ACT, ויצירת מפה ויזואלית אישית בעזרת מחולל תמונות. המפה הופכת לעוגן יישומי שמסייע לעבור מתגובה אוטומטית לבחירה מודעת מול אתגרי היומיום.</p>
+    </div>
+  </div>
+
+  <div class="lesson-card fade-in">
+    <div class="lesson-num">6</div>
+    <div class="lesson-body">
+      <div class="tag-row">
+        <span class="lesson-tag">20.1.27 · 17:00–19:30</span>
+        <span class="lesson-type">סינכרוני: הרצאה וסדנה</span>
+      </div>
+      <h3 class="lesson-title">הדיאלוג החדש: להשמיע את קול הבמאי</h3>
+      <p class="lesson-sub">תקשורת מקרבת (NVC)</p>
+      <p>היכרות עם עקרונות התקשורת המקרבת של מרשל רוזנברג. תרגול שיח מקרב באמצעות "בוט מאמן", לפי ארבעת שלבי המודל: תצפית, רגש, צורך ובקשה, והקשבה פנימית בעזרת מצפן הלב.</p>
+    </div>
+  </div>
+
+  <div class="lesson-card fade-in">
+    <div class="lesson-num">7</div>
+    <div class="lesson-body">
+      <div class="tag-row">
+        <span class="lesson-tag">3.2.27 · 17:00–19:30</span>
+        <span class="lesson-type">סינכרוני: הרצאה וסדנה</span>
+      </div>
+      <h3 class="lesson-title">חדר העריכה: עוגנים יומיומיים והרחבת התודעה</h3>
+      <p>תרגול שימוש בכלי "חדר העריכה" למעבר מתגובה אוטומטית לבחירה מודעת בזמן אמת. יצירת שגרת הזנה מנטלית מתוך עמדת "האדם הלומד", והיכרות עם NotebookLM ככלי ללמידה, חקירה והעמקה אישית.</p>
+    </div>
+  </div>
+
+  <div class="lesson-card fade-in">
+    <div class="lesson-num">8</div>
+    <div class="lesson-body">
+      <div class="tag-row">
+        <span class="lesson-tag">17.2.27 · 17:00–19:30</span>
+        <span class="lesson-type">פנים אל פנים</span>
+        <span class="lesson-place">מרכז פסגה כפר סבא</span>
+      </div>
+      <h3 class="lesson-title">הפקת הטריילר של חיינו</h3>
+      <p>תרגום החזון האישי לשפה חזותית וקולנועית. שימוש בבוט מנחה לתכנון סצנות וכתיבת טקסטים, יצירת תמונות באמצעות מחוללי בינה מלאכותית, והרכבת סרטון אישי באמצעות Google Vids.</p>
+    </div>
+  </div>
+
+  <div class="lesson-card fade-in">
+    <div class="lesson-num">9</div>
+    <div class="lesson-body">
+      <div class="tag-row">
+        <span class="lesson-tag">3.3.27 · 17:00–19:30</span>
+        <span class="lesson-type">פנים אל פנים</span>
+        <span class="lesson-place">מרכז פסגה כפר סבא</span>
+      </div>
+      <h3 class="lesson-title">יצירת "עוזר במאי" אישי מבוסס AI</h3>
+      <p>בניית אפליקציה אישית בעזרת פלטפורמת Lovable, או בוט מותאם, שישמשו כעוגן יומיומי לשמירה על הרגלים, מודעות ותנועה עקבית לעבר החיים הרצויים. כל משתתף כותב את "הוראות ההפעלה" של הכלי האישי שלו, ללא צורך בידע מוקדם בתכנות.</p>
+    </div>
+  </div>
+
+  <div class="lesson-card fade-in">
+    <div class="lesson-num">10</div>
+    <div class="lesson-body">
+      <div class="tag-row">
+        <span class="lesson-tag">17.3.27 · 17:00–19:30</span>
+        <span class="lesson-type">סינכרוני</span>
+      </div>
+      <h3 class="lesson-title">מחזון למציאות</h3>
+      <p>הצגת תוצרי הסיום האישיים, הטריילר ועוזר הבמאי. שיתוף בתהליך שעברנו ובעוגנים שבנינו, ובניית תוכנית המשך לתרגול הכלים בשגרה במרחב Life Coding.</p>
+    </div>
+  </div>
+
+
+</main>
+
+<footer class="footer">
+  <p>בינת הלב, Life Coding | יעל נזר © 2026</p>
+</footer>
+
+<script>
+function toggleAbout() {
+  var sec = document.getElementById('about');
+  var btn = document.getElementById('aboutBtn');
+  if (sec.hasAttribute('hidden')) {
+    sec.removeAttribute('hidden');
+    btn.textContent = 'סגירת הפרטים ↑';
+  } else {
+    sec.setAttribute('hidden', '');
+    btn.textContent = 'לפרטים על המנחה ←';
+  }
+}
+</script>
+
+</body>
+</html>
